@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+/* Efeito de gradiente animado para o fundo do hero */
+.animated-gradient {
+  background: linear-gradient(45deg, #1e3a8a, #3b82f6, #60a5fa);
+  background-size: 200% 200%;
+  animation: gradient-animation 10s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
