@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function App() {
@@ -6,7 +6,7 @@ export default function App() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  async function handleSubmitForm(e) {
+  async function handleSubmitForm(e: FormEvent) {
     e.preventDefault();
 
     window.location.href = `https://wa.me/+552126062981?text=Olá, me chamo ${name} e tenho uma solicitação: ${message}. Meu e-mail: ${email}`;
