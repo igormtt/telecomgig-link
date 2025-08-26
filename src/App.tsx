@@ -1,4 +1,17 @@
+import { useState } from "react";
+import { IoLogoWhatsapp } from "react-icons/io";
+
 export default function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  async function handleSubmitForm(e) {
+    e.preventDefault();
+
+    window.location.href = `https://wa.me/+552126062981?text=Olá, me chamo ${name} e tenho uma solicitação: ${message}. Meu e-mail: ${email}`;
+  }
+
   return (
     <div className="bg-gray-50 text-gray-800">
       <header
@@ -35,12 +48,23 @@ export default function App() {
               Contato
             </a>
           </nav>
-          <a
-            href="#contato"
-            className="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-transform hover:scale-105"
-          >
-            Solicite um Orçamento
-          </a>
+
+          <div className="flex flex-row items-center gap-8">
+            <a
+              href="#contato"
+              className="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-transform hover:scale-105"
+            >
+              Solicite um Orçamento
+            </a>
+
+            <a
+              href="https://wa.me/+552126062981?text=Ol%C3%A1!+vim+pelo+site+e+gostaria+de+solicitar+um+or%C3%A7amento."
+              className="text-green-500 "
+            >
+              <IoLogoWhatsapp size={40} />
+            </a>
+          </div>
+
           <button
             id="mobile-menu-button"
             className="md:hidden text-gray-700 focus:outline-none"
@@ -104,7 +128,7 @@ export default function App() {
           className="relative bg-[url(/Fundo.jpg)] bg-fixed bg-cover bg-center text-white pt-32 pb-20 md:pt-40 md:pb-28"
         >
           {/* Overlay escuro */}
-          <div className="absolute inset-0 bg-black/50"></div>
+          {/* <div className="absolute inset-0 bg-black/50"></div> */}
 
           {/* Conteúdo */}
           <div className="relative z-10 container mx-auto px-6 text-center">
@@ -356,7 +380,7 @@ export default function App() {
               </p>
             </div>
             <div className="max-w-4xl mx-auto bg-gray-50 p-8 md:p-12 rounded-xl shadow-lg">
-              <form id="contact-form">
+              <form id="contact-form" onSubmit={handleSubmitForm}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label
@@ -371,6 +395,8 @@ export default function App() {
                       name="name"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
+                      onChange={(e) => setName(e.target.value)}
+                      value={name}
                     />
                   </div>
                   <div>
@@ -386,6 +412,8 @@ export default function App() {
                       name="email"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
+                      onChange={(e) => setEmail(e.target.value)}
+                      value={email}
                     />
                   </div>
                 </div>
@@ -402,6 +430,8 @@ export default function App() {
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
                   ></textarea>
                 </div>
                 <div className="text-center">
@@ -462,7 +492,7 @@ export default function App() {
             </a>
           </div>
           <p className="text-gray-400">
-            &copy; 2024 TelecomGig@Link. Todos os direitos reservados.
+            &copy; 2025 TelecomGig@Link. Todos os direitos reservados.
           </p>
         </div>
       </footer>
