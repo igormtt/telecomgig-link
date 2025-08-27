@@ -125,10 +125,11 @@ export default function App() {
       <main>
         <section
           id="inicio"
-          className="relative bg-[url(/Fundo.jpg)] bg-fixed bg-cover bg-center text-white pt-32 pb-20 md:pt-40 md:pb-28"
+          // className="relative bg-[url(/Fundo.jpg)] bg-fixed bg-cover bg-center text-white pt-32 pb-20 md:pt-40 md:pb-28"
+          className="relative bg-[url(/Fundo.jpg)] bg-center bg-cover bg-scroll text-white pt-32 pb-20 md:pt-40 md:pb-28"
         >
           {/* Overlay escuro */}
-          {/* <div className="absolute inset-0 bg-black/50"></div> */}
+          <div className="absolute inset-0 bg-black/50"></div>
 
           {/* Conteúdo */}
           <div className="relative z-10 container mx-auto px-6 text-center">
