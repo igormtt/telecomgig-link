@@ -125,13 +125,10 @@ export default function App() {
       <main>
         <section
           id="inicio"
-          // className="relative bg-[url(/Fundo.jpg)] bg-fixed bg-cover bg-center text-white pt-32 pb-20 md:pt-40 md:pb-28"
           className="relative bg-[url(/Fundo.jpg)] bg-center bg-cover bg-scroll text-white pt-32 pb-20 md:pt-40 md:pb-28"
         >
-          {/* Overlay escuro */}
           <div className="absolute inset-0 bg-black/60"></div>
 
-          {/* Conteúdo */}
           <div className="relative z-10 container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Conectando seu Mundo com Tecnologia de Ponta
@@ -325,6 +322,70 @@ export default function App() {
                 <p className="text-gray-600">
                   Sistemas de interfonia e automação de portões para condomínios
                   e residências, aliando conforto e segurança.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div className="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-video w-8 h-8"
+                  >
+                    <path d="M4 10a8 8 0 0 0 10 10l-5-5z" />
+                    <path d="M11 11l4-4" />
+                    <path d="M12 20v2" />
+                    <path d="M8 22h8" />
+                    <path d="M14 6c3 0 5 2 5 5" />
+                    <path d="M14 10c1.5 0 3 1 3 3" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Antena por satélite</h3>
+                <p className="text-gray-600">
+                  Antena por satélite. Instalação e manutenção para acesso a
+                  canais de TV com qualidade de sinal e variedade de
+                  programação.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div className="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-video w-8 h-8"
+                  >
+                    <circle cx="12" cy="12" r="2" />
+
+                    <path d="M12 10V4" />
+                    <path d="M12 14v6" />
+                    <path d="M10.6 10.6L6 6" />
+                    <path d="M13.4 10.6L18 6" />
+
+                    <circle cx="12" cy="4" r="1.5" />
+                    <circle cx="12" cy="20" r="1.5" />
+                    <circle cx="6" cy="6" r="1.5" />
+                    <circle cx="18" cy="6" r="1.5" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Antena Coletiva</h3>
+                <p className="text-gray-600">
+                  Antena coletiva. Instalação e manutenção para distribuição de
+                  sinal de TV em múltiplos pontos com qualidade e estabilidade.
                 </p>
               </div>
             </div>
